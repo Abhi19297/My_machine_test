@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".home.MainActivity">
+
+    <include
+        android:id="@+id/custom_toolbar"
+        layout="@layout/common_toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:id="@+id/mScrollView"
+        android:overScrollMode="never"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/tenDp"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                    <EditText
+                        android:drawableLeft="@drawable/ic_baseline_search_24"
+                        android:padding="@dimen/tenDp"
+                        android:drawablePadding="@dimen/tenDp"
+                        android:id="@+id/edt_search"
+                        android:background="@null"
+                        android:singleLine="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:hint="@string/search_name_here"
+                        android:iconifiedByDefault="false"
+                        android:layout_alignParentTop="true"
+                        />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_profile_details"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/profile_details_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/txt_empty"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/defaultFontSize"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_not_found"
+                />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

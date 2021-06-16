@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_10sdp"
+    tools:context=".login.LoginActivity">
+
+
+    <TextView
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+
+    <EditText
+        android:id="@+id/edt_email_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grey_box"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/tenDp"
+        android:hint="@string/enter_email_id"
+        android:textSize="@dimen/defaultFontSize"
+        android:inputType="textEmailAddress"
+         />
+    <EditText
+        android:id="@+id/edt_password"
+        android:background="@drawable/grey_box"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/tenDp"
+        android:hint="@string/ent_pass"
+        android:textSize="@dimen/defaultFontSize"
+        android:inputType="textPassword"
+         />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_margin="@dimen/tenDp"
+        android:textSize="@dimen/defaultFontSize"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/login"
+        />
+</LinearLayout>
